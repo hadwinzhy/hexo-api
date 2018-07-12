@@ -10,8 +10,10 @@ VOLUME [ "/blog" ]
 
 RUN npm install hexo-cli -g
 
-COPY . /blog
+COPY package.json .
 
 RUN npm install
+
+COPY . /blog
 
 CMD [ "bash", "-c", "hexo server" ]
