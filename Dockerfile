@@ -14,6 +14,6 @@ COPY package.json .
 
 RUN npm install
 
-COPY . /blog
+COPY . .
 
 CMD [ "bash", "-c", "hexo server" ]
